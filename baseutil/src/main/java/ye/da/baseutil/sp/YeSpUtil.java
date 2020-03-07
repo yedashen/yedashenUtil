@@ -236,4 +236,11 @@ public class YeSpUtil {
         mEditor.clear();
         mEditor.commit();
     }
+
+    /**
+     * 判断该键是否在xml中存在
+     */
+    public boolean contains(String key) {
+       return mSharedPreferences.contains(key);
+    }
 }
