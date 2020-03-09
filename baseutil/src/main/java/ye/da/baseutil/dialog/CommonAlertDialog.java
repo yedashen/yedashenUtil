@@ -17,11 +17,15 @@ public class CommonAlertDialog {
 
     private static final String TAG = "CommonAlertDialog";
 
+    private CommonAlertDialog() {
+
+    }
+
     /**
      * @param activity 必传，并且不能只是传context
      *                 todo 解决当activity 不可见的时候显示diaolog的问题，做一个util，所有显示dialog都必须去进行判断
      */
-    public static void showCommonDialog(Activity activity, String desc, String negativeMsg, String positiveMsg, final CommonDialogClickListener listener) {
+    public static AlertDialog showCommonDialog(Activity activity, String desc, String negativeMsg, String positiveMsg, final CommonDialogClickListener listener) {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setMessage(desc);
         builder.setPositiveButton(positiveMsg, new DialogInterface.OnClickListener() {
@@ -36,13 +40,16 @@ public class CommonAlertDialog {
                 listener.negativeClick();
             }
         });
+        AlertDialog alertDialog = builder.create();
         if (!activity.isFinishing()) {
             //如果activity没有finish
-            AlertDialog alertDialog = builder.show();
+            alertDialog.show();
         } else {
             //如果activity 已经finish了或者不可见，那么就存在调用已经，需要注意
             YeLogger.e(TAG, "Dialog show 已经，因为activity 已经finish了");
+            listener.cantShow();
         }
+        return alertDialog;
     }
 
     /**
@@ -67,5 +74,10 @@ public class CommonAlertDialog {
          * （左边按钮点击事件）
          */
         void negativeClick();
+
+        /**
+         * activity 不可见
+         */
+        void cantShow();
     }
 }

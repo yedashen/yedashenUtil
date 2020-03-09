@@ -31,11 +31,21 @@ InitCtx.getInstance().setContextListener(new InitCtx.ContextListener() {
  （1）跳转到高德、百度工具：JumpMapUtil
  （2）todo 仅支持GPS定位工具：
 9、APP工具：
- （1）APP升级工具：
- （2）APP安装工具：
+ （1）APP升级工具：UpdateHelper，例子：AppUpdateActivity
+ （2）APP安装工具：InstallUtil,请记得配置xml和权限，例子：AppUpdateActivity
  （3）APP崩溃日志收集工具：CrashHelper
+ （4）todo APP上传附件：单个附件上传、多附件上传，看你的业务需要。
 10、沉浸式状态栏工具：StatusBarUtil
 11、照片工具：
  （1）todo 水印工具：WatermarkUtil，本工具类需要集成RxJava，我暂时先把代码屏蔽了
  （2）todo 照片压缩工具（给上传用的）
  （3）todo 本地生成缩略图工具：（（1）但是建议由服务器来生成，这样APP很方便。（2）服务器不同意就建议边上传变生成）
+12、与点击事件相关的：
+ （1）todo 点击按钮震动：ShockUtil,请记得配置权限
+ （2）todo 过滤多次点击（保留一次）：你也可以直接用RxBinding+RxJava来解决
+ （3）todo 双击：
+13、适合Fragment + ViewPager/TabLayout/RadioGroup等框架
+14、http工具：
+ （1）网速工具类：NetWorkSpeedUtils,例子：DownloadFileActivity
+ （2）文件带进度、带网速下载工具：DownloadHelper，例子：DownloadFileActivity
+ （3）todo 网络请求框架：

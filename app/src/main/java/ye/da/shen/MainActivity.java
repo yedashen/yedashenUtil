@@ -2,15 +2,18 @@ package ye.da.shen;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import ye.da.baseutil.InitCtx;
-import ye.da.baseutil.sp.YeSpUtil;
+import ye.da.baseutil.log.YeLogger;
+import ye.da.shen.base.BaseActivity;
 
 /**
  * @author ChenYe
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
+
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +25,18 @@ public class MainActivity extends AppCompatActivity {
                 return MainActivity.this.getApplicationContext();
             }
         });
-        YeSpUtil.getInstance().clear();
-        //test Github
+        YeLogger.LOG_ENABLE = true;
+        findViewById(R.id.download_bt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DownloadFileActivity.newInstance(MainActivity.this);
+            }
+        });
+        findViewById(R.id.update_bt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppUpdateActivity.newInstance(MainActivity.this);
+            }
+        });
     }
 }
