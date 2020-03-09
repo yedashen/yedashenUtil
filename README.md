@@ -1,12 +1,12 @@
 # yedashenUtil
 尝试写一个方便自己项目使用的util
-#以下备注了todo的是还没加进去，下一个版本就要加进去
-1、Sp工具:YeSpUtil
-2、Toast工具:
+  #以下备注了todo的是还没加进去，下一个版本就要加进去
+  1、Sp工具:YeSpUtil
+  2、Toast工具:
  （1）普通的系统toast:ToastUtil
  （2）todo 自定义toast背景、字体、显示位置：
-3、Log工具:YeLogger
-4、Dialog工具:CommonAlertDialog
+  3、Log工具:YeLogger
+  4、Dialog工具:CommonAlertDialog
 5、TextView工具:
  （1）下划线工具:UnderlineUtil
  （2）todo 支持竖向收缩展开工具/自定义控件：
