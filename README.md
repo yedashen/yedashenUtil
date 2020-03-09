@@ -1,6 +1,15 @@
 # yedashenUtil
 尝试写一个方便自己项目使用的util
-#以下备注了todo的是还没加进去，下一个版本就要加进去  
+
+一、如果你用到本lib里面的ToastUtil、SP中至少一个类，那么请调用InitCtx进行Context赋值，否则会出现空指针，并且建议在Application里面进行初始化。  
+InitCtx.getInstance().setContextListener(new InitCtx.ContextListener() {  
+            @Override  
+            public Context getContext() {  
+                return getApplicationContext();  
+            }  
+        });  
+  #以下备注了todo的是还没加进去，下一个版本就要加进去   
+二、工具列表：
 1、Sp工具:YeSpUtil  
 2、Toast工具:  
  （1）普通的系统toast:ToastUtil  
