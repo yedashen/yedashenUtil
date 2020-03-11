@@ -38,5 +38,11 @@ public class MainActivity extends BaseActivity {
                 AppUpdateActivity.newInstance(MainActivity.this);
             }
         });
+        findViewById(R.id.progress_bt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProgressActivity.newInstance(MainActivity.this);
+            }
+        });
     }
 }

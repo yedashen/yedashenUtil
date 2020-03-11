@@ -33,6 +33,20 @@ public class DownloadHelper {
     }
 
     public void beginDownload(final Handler handler, final String downUrl, final String savePath, final NetWorkSpeedUtils netSpeedUtil) {
+        beginDownload(handler, downUrl, savePath, netSpeedUtil,5000,30000);
+    }
+
+    /**
+     *
+     * @param handler 跟activity 互动的handler，可以参考DownloadFileActivity怎么写的
+     * @param downUrl 下载地址
+     * @param savePath 保存在本地的地址
+     * @param netSpeedUtil 网速监听，也会在handler里面交互
+     * @param connectTimeout 连接地址服务器超时，int值，但是1000是一秒，不传就是5000
+     * @param readTimeout 接口连接超时，int值，，但是1000是一秒，不传就是30000（30秒），文件越大建议长点，最大建议不要超过120秒
+     */
+    public void beginDownload(final Handler handler, final String downUrl, final String savePath, final NetWorkSpeedUtils netSpeedUtil,final int connectTimeout
+    ,final int readTimeout) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -44,9 +58,9 @@ public class DownloadHelper {
                     YeLogger.e(TAG, "线程启动，并开始建立链接");
                     conn.setRequestMethod("GET");
                     //在指定时间内还没有连接到服务器就会报SocketTimeout异常
-                    conn.setConnectTimeout(5000);
+                    conn.setConnectTimeout(connectTimeout);
                     //是连接后在指定时间还没有获取到数据就超时
-                    conn.setReadTimeout(20000);
+                    conn.setReadTimeout(readTimeout);
                     conn.connect();
                     YeLogger.e(TAG, "建立链接成功");
                     int length = conn.getContentLength();

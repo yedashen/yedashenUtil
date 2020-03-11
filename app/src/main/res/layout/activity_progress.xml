@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
+
+    <ye.da.baseutil.progress.NumberProgressBar
+        android:id="@+id/numberbar1"
+        style="@style/NumberProgressBar_Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
+
+    <ye.da.baseutil.progress.NumberProgressBar
+        android:id="@+id/numberbar2"
+        style="@style/NumberProgressBar_Passing_Green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
+
+    <ye.da.baseutil.progress.NumberProgressBar
+        android:id="@+id/numberbar3"
+        style="@style/NumberProgressBar_Relax_Blue"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
+
+    <ye.da.baseutil.progress.NumberProgressBar
+        android:id="@+id/numberbar4"
+        style="@style/NumberProgressBar_Grace_Yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
+
+
+    <ye.da.baseutil.progress.NumberProgressBar
+        android:id="@+id/numberbar5"
+        style="@style/NumberProgressBar_Warning_Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
+
+
+    <ye.da.baseutil.progress.NumberProgressBar
+        android:id="@+id/numberbar6"
+        style="@style/NumberProgressBar_Funny_Orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/xnr_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="进度数字悬浮、没有圆角" />
+
+    <Button
+        android:id="@+id/xr_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="进度数字悬浮、有圆角" />
+
+    <Button
+        android:id="@+id/by_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="进度数字不悬浮、有圆角(有视觉bug)" />
+
+    <Button
+        android:id="@+id/bb_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="进度数字不悬浮、没有圆角" />
+
+    <Button
+        android:id="@+id/np_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="进度条不带数字、有圆角" />
+
+    <Button
+        android:id="@+id/npn_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="进度条不带数字、没有圆角" />
+
+</LinearLayout>

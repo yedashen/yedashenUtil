@@ -49,3 +49,4 @@ InitCtx.getInstance().setContextListener(new InitCtx.ContextListener() {
  （1）网速工具类：NetWorkSpeedUtils,例子：DownloadFileActivity
  （2）文件带进度、带网速下载工具：DownloadHelper，例子：DownloadFileActivity
  （3）todo 网络请求框架：
+15、带动画、圆角进度条工具：NumberProgressBar,例子：ProgressActivity，支持用到列表item上
