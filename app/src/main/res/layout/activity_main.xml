@@ -39,6 +39,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="进度条" />
+
+            <Button
+                android:id="@+id/dance_bt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="数字（金额）跳动" />
         </LinearLayout>
     </ScrollView>
 

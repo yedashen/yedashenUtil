@@ -25,4 +25,9 @@
     <declare-styleable name="Themes">
         <attr name="numberProgressBarStyle" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="DancingNumberView">
+        <attr name="dnv_duration" format="integer"/>
+        <attr name="dnv_format" format="string"/>
+    </declare-styleable>
 </resources>

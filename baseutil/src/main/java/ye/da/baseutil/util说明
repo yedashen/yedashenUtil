@@ -21,7 +21,7 @@ InitCtx.getInstance().setContextListener(new InitCtx.ContextListener() {
 5、TextView工具:
  （1）下划线工具:UnderlineUtil
  （2）todo 支持竖向收缩展开工具/自定义控件：
- （3）todo 数字跳动工具：
+ （3）数字跳动工具：DancingNumberView,例子：DanceTvActivity
 6、Device工具：支持获取APP版本信息、安装时间、更新时间、手机厂商、手机系统版本、macId、AndroidId等
 7、File工具：
  （1）读取工具/生成文件工具：FileFindUtil

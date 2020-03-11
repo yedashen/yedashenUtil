@@ -44,5 +44,11 @@ public class MainActivity extends BaseActivity {
                 ProgressActivity.newInstance(MainActivity.this);
             }
         });
+        findViewById(R.id.dance_bt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DanceTvActivity.newInstance(MainActivity.this);
+            }
+        });
     }
 }

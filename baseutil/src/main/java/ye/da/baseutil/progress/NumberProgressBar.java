@@ -645,12 +645,14 @@ public class NumberProgressBar extends View {
                             } else {
                                 setProgress(mCurrentProgress + 1);
                             }
+                        }else {
+                            mTimer.cancel();
                         }
                     }
                 });
             }
         };
-        mTimer.schedule(timerTask, 500, period);
+        mTimer.schedule(timerTask, 200, period);
     }
 
     private Timer mTimer = null;
